@@ -17,3 +17,35 @@
 @{
     @:The day is: @DateTime.Now.DayOfWeek. It is a <b>meh</b> day!
 }
+
+@{
+    var showToday = false;
+    
+    if(showToday){
+        @DateTime.Today;
+    } 
+    else {
+        <text>sorry!</text>
+    }
+}
+
+<p> single line foreach</p>
+<ul>
+    @foreach (var item in Request.ServerVariables) {
+        <li>@item</li>
+    }
+</ul>
+
+@* While loop *@
+@{
+    var countNum = 0;
+    while (countNum < 13) {
+        countNum += 1;
+        <p>Line #@countNum</p>
+    }
+}
+
+@using (Html.BeginForm("test", "HTML", FormMethod.Post))
+{
+
+}

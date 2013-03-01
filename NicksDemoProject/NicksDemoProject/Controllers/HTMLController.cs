@@ -16,5 +16,10 @@ namespace NicksDemoProject.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult test(List<string> list)
+        {
+            return null;
+        }
     }
 }
